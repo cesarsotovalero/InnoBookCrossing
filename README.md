@@ -1,6 +1,8 @@
 # InnoBookCrossing - Application for sharing books at Innopolis
 
-The application is designed to help people share books with each other. 
+### Description
+
+The application is designed to help people share books with each other. All you need to do - register on a website using your Telegram Alias. 
 
 ### The motivation of the project 
 
