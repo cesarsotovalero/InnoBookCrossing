@@ -21,6 +21,14 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * Spring
 * React
 
+### Screenshots
+
+*will be soon*
+
 ### Code example
+
+*will be soon*
+
+### Demo
 
 *will be soon*
