@@ -39,3 +39,7 @@ We all have books that we are not currently reading. Why should a book lay on a 
 ### Demo
 
 *will be soon*
+
+### Installation
+
+*will be soon*
