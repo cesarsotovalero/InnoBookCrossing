@@ -15,3 +15,12 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * User can search for an interesting book using filters.
 * User can publish the book which he\she wants to find in the printed version.
 * Book owner can leave feedback on a user, who took the book recently.
+
+### Frameworks or technology
+
+* Spring
+* React
+
+### Code example
+
+*will be soon*
