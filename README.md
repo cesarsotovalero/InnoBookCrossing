@@ -21,6 +21,13 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * Spring
 * React
 
+### Authors
+ 
+ * Dariya Vakhitova
+ * Alexandr Kedalo
+ * Ruslan Nurutdinov
+ * Roman Mukhtarov
+
 ### Screenshots
 
 *will be soon*
