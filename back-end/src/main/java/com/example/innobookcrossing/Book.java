@@ -15,9 +15,10 @@ public class Book {
     String title;
     @Column(name = "author")
     String author;
-    String owner; // заменить на юзера
     @Column(name = "genre")
     String genre;
+    @Column(name = "owner")
+    String owner; // заменить на юзера
     @Column(name = "description")
     String description;
 

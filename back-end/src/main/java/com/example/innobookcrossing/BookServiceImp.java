@@ -1,5 +1,8 @@
 package com.example.innobookcrossing;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class BookServiceImp implements BookService {
     private final BookRepository bookRepository;
 
