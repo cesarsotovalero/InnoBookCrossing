@@ -1,7 +1,7 @@
 .bookCell{
     width: 160px;
     height: 200px;
-    margin: 0;
+    margin: 5px;
     padding: 0;
     border: 1px solid dimgray;
     border-radius: 0 0 20px 20px;
