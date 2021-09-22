@@ -20,6 +20,7 @@ public class PersonalLibraryController {
 
     @ApiOperation("Add a book. Returns Book entity. PERSONAL LIBRARY")
     @PostMapping("book/{userId}/add")
+    @CrossOrigin(origins = "http://localhost:3000")
     public Book createBook(@PathVariable Integer userId, @RequestBody Book book) {
         return userRepository.findById(userId)
                 .map(user -> {
@@ -31,6 +32,7 @@ public class PersonalLibraryController {
 
     @ApiOperation("update a book. Returns Book entity. PERSONAL LIBRARY")
     @PutMapping("/user/{userId}/book/{bookId}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public Book updateAssignment(@PathVariable Integer userId,
                                  @PathVariable Integer bookId,
                                  @RequestBody Book bookUpdated) {
@@ -52,6 +54,7 @@ public class PersonalLibraryController {
 
     @ApiOperation("Returns all Book od user with id = userID. PERSONAL LIBRARY")
     @GetMapping("/user/{userId}/books")
+    @CrossOrigin(origins = "http://localhost:3000")
     public List<Book> getBookStudentId(@PathVariable Integer userId) {
 
         if (!userRepository.existsById(userId)) {

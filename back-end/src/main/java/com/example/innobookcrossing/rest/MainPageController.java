@@ -26,12 +26,14 @@ public class MainPageController {
 
     @ApiOperation("Get operation. Return book by specified ID. MAIN PAGE / LIBRARY")
     @GetMapping("book/get/{id}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public Book getBook(@PathVariable Integer id) {
         return bookRepository.findBookById(id);
     }
 
     @ApiOperation("Search for a book. MAIN PAGE / LIBRARY")
     @GetMapping("book/search")
+    @CrossOrigin(origins = "http://localhost:3000")
     public Book getBooks(@RequestParam
                          @Parameter(description = "Searching book by title") String search) {
         return bookRepository.findBookByTitle(search);
