@@ -19,6 +19,7 @@ public class MainPageController {
 
     @ApiOperation("Returns all Books. MAIN PAGE / LIBRARY")
     @GetMapping("book/get/all")
+    @CrossOrigin(origins = "http://localhost:3000")
     public List<Book> getBooks() {
         return bookRepository.findAll();
     }

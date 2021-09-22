@@ -14,7 +14,7 @@ CREATE TABLE book
     genre       VARCHAR(200),
     owner       VARCHAR(200),
     description VARCHAR(500),
-    image       bytea,
+    image       VARCHAR(200),
     user_id     int,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (id)
 );

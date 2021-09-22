@@ -51,7 +51,7 @@ public class PersonalLibraryController {
     }
 
     @ApiOperation("Returns all Book od user with id = userID. PERSONAL LIBRARY")
-    @GetMapping("/user/{userId}/bookss")
+    @GetMapping("/user/{userId}/books")
     public List<Book> getBookStudentId(@PathVariable Integer userId) {
 
         if (!userRepository.existsById(userId)) {
