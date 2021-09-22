@@ -1,15 +1,16 @@
-package com.example.innobookcrossing;
+package com.example.innobookcrossing.model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "book")
 public class Book {
     @Id
+    @SequenceGenerator(name = "IdSeq", sequenceName = "book_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "IdSeq")
     Integer id;
     @Column(name = "title")
     String title;
@@ -21,6 +22,13 @@ public class Book {
     String owner; // заменить на юзера
     @Column(name = "description")
     String description;
+//    @Lob
+//    byte[] image;
+
+    @ManyToOne//(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore
+    private User user;
 
     public Book() {
     }
@@ -72,4 +80,20 @@ public class Book {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+//    public byte[] getImage() {
+//        return image;
+//    }
+//
+//    public void setImage(byte[] image) {
+//        this.image = image;
+//    }
 }
