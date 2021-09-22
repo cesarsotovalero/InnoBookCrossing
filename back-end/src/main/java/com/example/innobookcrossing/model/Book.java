@@ -22,8 +22,9 @@ public class Book {
     String owner; // заменить на юзера
     @Column(name = "description")
     String description;
-//    @Lob
-//    byte[] image;
+    @Lob
+    @Column(name = "image")
+    byte[] image;
 
     @ManyToOne//(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
@@ -89,11 +90,11 @@ public class Book {
         this.user = user;
     }
 
-//    public byte[] getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(byte[] image) {
-//        this.image = image;
-//    }
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 }
