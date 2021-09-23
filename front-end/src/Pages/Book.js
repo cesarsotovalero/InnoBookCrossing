@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Panel from "../bookViewers/book_info";
+import BookInfo from "../bookViewers/book_info";
 
 class Book extends Component {
     constructor(props) {
@@ -24,14 +26,7 @@ class Book extends Component {
         const book = this.state.book
         return (
             <div>
-                {book.image ? (
-                    <img className="bookImg" src={book.image}/>
-                ) : (
-                    <img className="bookImg" src="no_image.png"/>
-                )}
-                <h2>{book.title}</h2>
-                <h3>{book.author}</h3>
-
+                <BookInfo book={book}/>
             </div>
         );
     }
