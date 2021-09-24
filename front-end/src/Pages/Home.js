@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import Carousel from "../bookViewers/carousel";
+import AddBook from "../mainComponents/addBook";
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            latestBooks: []
+            latestBooks: [],
+            showAdd: false
         }
     }
     componentDidMount() {
@@ -21,6 +23,11 @@ class Home extends Component {
     }
 
     render() {
+        let styles ={
+            hidden:{
+                visibility: 'hidden',
+            }
+        }
         const latestWishes = this.state.latestBooks
         // const latestBooks = [
         //     {id:1, title:"Пиковая дама", author:"Пушкин", img:"https://api.v2.gersun.the-o.co/media/3_%D0%A8%D0%B5%D1%81%D1%82%D0%B8%D0%B3%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D0%BA%D0%B0_8lt1m4x.jpeg"},
@@ -34,6 +41,12 @@ class Home extends Component {
         // ]
         return (
             <div className="Home">
+                <button onClick={() => this.setState({showAdd : !this.state.showAdd})}>
+                    { this.state.showAdd ? 'Cancel' : 'Add book' }
+                </button>
+
+                { this.state.showAdd ? <AddBook/> : null }
+
                 {/*<Carousel bookSet={this.latestBooks} label={"Latest updates"}/>*/}
                 <Carousel bookSet={latestWishes} label={"Latest wishes"}/>
             </div>
