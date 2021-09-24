@@ -31,6 +31,7 @@
 .bookCell .bookInfo h2{
     font-size: 14px;
     left: 50%;
+    color: #000;
     transform: translate(-50%, 0)
 }
 .bookCell .bookInfo h3{
