@@ -8,7 +8,7 @@ export default function Carousel(props){
             <h1>{props.label}</h1>
             <ul className="carouselList">
                 { props.bookSet.map(book => {
-                    return <li><Item book={book}/></li>
+                    return <li key={book.id}><Item book={book}/></li>
                 })}
 
 

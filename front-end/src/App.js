@@ -8,16 +8,17 @@ import Book from "./Pages/Book";
 function App() {
 
     return (
-        <body>
-        <Header/>
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/library" component={Lib} />
-                <Route path='/library/:book' component={Book}/>
-            </Switch>
-        </Router>
-        </body>
+        <div>
+            <Header/>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/library" component={Lib} />
+                    <Route path='/library/:book' component={Book}/>
+                </Switch>
+            </Router>
+        </div>
+
     );
 }
 

@@ -7,7 +7,7 @@ export default function Panel(props){
         <div>
             <ul className="booksPanel">
                 { props.bookSet.map(book => {
-                    return <li><Item book={book}/></li>
+                    return <li key={book.id}><Item book={book}/></li>
                 })}
 
 
