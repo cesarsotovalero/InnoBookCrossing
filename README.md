@@ -44,10 +44,11 @@ In the development process the following principles were followed as closely as 
 
 Frameworks:
 
-* MVC
 * Composite pattern 
 
 ## :hammer: Architecture
+
+![picture](https://www.codeproject.com/KB/java/879896/mvc_role_diagram.png)
 
 ### Screenshots
 
