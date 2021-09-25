@@ -30,9 +30,6 @@ public class Book {
     @JsonIgnore
     private User user;
 
-    public Book() {
-    }
-
     public Integer getId() {
         return id;
     }

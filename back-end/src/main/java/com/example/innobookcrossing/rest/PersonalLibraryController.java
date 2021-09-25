@@ -12,6 +12,8 @@ import java.util.List;
 
 @RestController
 public class PersonalLibraryController {
+
+    static final String USER_NOT_FOUND = "User not found!";
     @Autowired
     private BookRepository bookRepository;
 
@@ -26,7 +28,7 @@ public class PersonalLibraryController {
                 .map(user -> {
                     book.setUser(user);
                     return bookRepository.save(book);
-                }).orElseThrow(() -> new NotFoundException("User not found!"));
+                }).orElseThrow(() -> new NotFoundException(USER_NOT_FOUND));
 
     }
 
@@ -38,7 +40,7 @@ public class PersonalLibraryController {
                                  @RequestBody Book bookUpdated) {
 
         if (!userRepository.existsById(userId)) {
-            throw new NotFoundException("User not found!");
+            throw new NotFoundException(USER_NOT_FOUND);
         }
         return bookRepository.findById(bookId)
                 .map(book -> {
@@ -58,7 +60,7 @@ public class PersonalLibraryController {
     public List<Book> getBookStudentId(@PathVariable Integer userId) {
 
         if (!userRepository.existsById(userId)) {
-            throw new NotFoundException("User not found!");
+            throw new NotFoundException(USER_NOT_FOUND);
         }
 
         return bookRepository.findByUserId(userId);

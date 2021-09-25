@@ -1,7 +1,5 @@
 package com.example.innobookcrossing.model;
 
-import com.example.innobookcrossing.model.Book;
-
 import javax.persistence.*;
 import java.util.Set;
 

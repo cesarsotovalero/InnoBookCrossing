@@ -1,8 +1,6 @@
 package com.example.innobookcrossing.rest;
 
-import com.example.innobookcrossing.exceptions.NotFoundException;
 import com.example.innobookcrossing.jpa.BookRepository;
-import com.example.innobookcrossing.jpa.UserRepository;
 import com.example.innobookcrossing.model.Book;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Parameter;
