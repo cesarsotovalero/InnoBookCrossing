@@ -40,7 +40,7 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 ## :scroll: Design Documentation
 
-![sequence diagram](https://drive.google.com/file/d/14elnF24RqjYbqYh5G7aHhB6jPkbLUrci/view)
+![Sequence diagram](https://user-images.githubusercontent.com/66779337/134778315-9a577dc9-544c-465e-9f9f-6d72696b0c66.png)
 
 In the development process the following principles were followed as closely as possible
 * SOLID
@@ -158,3 +158,4 @@ The architecture of the project is based on Model-View-Controller architecture. 
 ### Installation
 
 *will be soon*
+
