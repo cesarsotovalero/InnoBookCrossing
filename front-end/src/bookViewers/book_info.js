@@ -21,7 +21,7 @@ export default function BookInfo({book}){
                 <h3>Genre: {book.genre}</h3>
                 <br/>
                 <p>Book owner: {book.owner}</p>
-                <p>{book.description}</p>
+                <p>Description: {book.description}</p>
             </div>
 
 
