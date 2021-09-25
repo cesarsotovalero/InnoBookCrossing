@@ -40,7 +40,12 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 ## :scroll: Design Documentation
 
+Sequence diagram
 ![Sequence diagram](https://user-images.githubusercontent.com/66779337/134778315-9a577dc9-544c-465e-9f9f-6d72696b0c66.png)
+
+Use cases
+![Use case](https://user-images.githubusercontent.com/66779337/134778380-0efd4238-a096-4360-a2b8-b0ead3dc83f9.jpg)
+
 
 In the development process the following principles were followed as closely as possible
 * SOLID
