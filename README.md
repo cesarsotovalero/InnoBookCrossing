@@ -1,6 +1,6 @@
 # InnoBookCrossing - Application for sharing books at Innopolis
 
-## Requirement Engineering [Link](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
+## General Information 
 
 ### Description
 
@@ -25,6 +25,15 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * Swagger
 * React
 
+### Authors
+ 
+ * Dariya Vakhitova
+ * Alexandr Kedalo
+ * Ruslan Nurutdinov
+ * Roman Mukhtarov
+ 
+## Requirement Engineering [Link](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
+
 ## Design Documentation
 
 In the development process the following principles were followed as closely as possible
@@ -35,13 +44,6 @@ Frameworks:
 
 * MVC
 * Composite pattern 
-
-### Authors
- 
- * Dariya Vakhitova
- * Alexandr Kedalo
- * Ruslan Nurutdinov
- * Roman Mukhtarov
 
 ### Screenshots
 
