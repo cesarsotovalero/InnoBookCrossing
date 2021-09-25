@@ -1,6 +1,6 @@
 # InnoBookCrossing - Application for sharing books at Innopolis
 
-## General Information 
+## :mag: General Information 
 
 ### Description
 
