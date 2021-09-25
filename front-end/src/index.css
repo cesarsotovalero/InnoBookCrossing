@@ -13,7 +13,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1{
+  color: #348f41;
+}
+h2{
+  color: #348f41;
+}
+h3{
+  color: #348f41;
+}
+p{
+  color: #348f41
+}
 
+*{
+  border: none;
+}
 .hide{
-  display: none;
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
 }
