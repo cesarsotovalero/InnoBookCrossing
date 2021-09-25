@@ -32,10 +32,10 @@ We all have books that we are not currently reading. Why should a book lay on a 
  * Ruslan Nurutdinov
  * Roman Mukhtarov
  
-## Requirement Engineering 
+## :round_pushpin: Requirement Engineering 
 [Link](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
 
-## Design Documentation
+## :scroll: Design Documentation
 
 In the development process the following principles were followed as closely as possible
 * SOLID
@@ -46,7 +46,7 @@ Frameworks:
 * MVC
 * Composite pattern 
 
-## Architecture
+## :hammer: Architecture
 
 ### Screenshots
 
