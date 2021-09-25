@@ -1,5 +1,7 @@
 # :green_book: InnoBookCrossing - Application for sharing books at Innopolis
 
+gh-md-toc
+
 ## :mag: General Information 
 
 ### Description
