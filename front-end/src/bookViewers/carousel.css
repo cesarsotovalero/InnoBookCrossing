@@ -3,14 +3,11 @@
     white-space:nowrap;
     overflow-x: scroll;
     padding-inline-start: 5px;
-
-
 }
 .carouselList li{
     display: inline-block;
-
     padding:0;
-    margin: 0 0 30px;
+    margin: 0 0 60px;
 
 }
 
@@ -28,10 +25,10 @@
 
 /* Handle */
 .carouselList::-webkit-scrollbar-thumb {
-    background: #88cb01;
+    background: #348f41;
 }
 
 /* Handle on hover */
 .carouselList::-webkit-scrollbar-thumb:hover {
-    background: #70a701;
+    background: #0f571e;
 }
