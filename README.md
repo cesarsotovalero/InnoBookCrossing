@@ -46,6 +46,8 @@ Frameworks:
 * MVC
 * Composite pattern 
 
+## Architecture
+
 ### Screenshots
 
 *will be soon*
