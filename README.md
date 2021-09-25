@@ -1,6 +1,6 @@
 # InnoBookCrossing - Application for sharing books at Innopolis
 
-### Requirement Engineering [Link](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
+## Requirement Engineering [Link](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
 
 ### Description
 
@@ -20,14 +20,21 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 ### Frameworks or technology
 
+* Java
 * Spring
+* Swagger
 * React
 
-### Design Documentation
+## Design Documentation
 
 In the development process the following principles were followed as closely as possible
 * SOLID
 * REST
+
+Frameworks:
+
+* MVC
+* Composite pattern 
 
 ### Authors
  
