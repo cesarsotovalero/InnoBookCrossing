@@ -23,6 +23,7 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * Java
 * Spring
 * Swagger
+* Javascript
 * React
 
 ### Authors
