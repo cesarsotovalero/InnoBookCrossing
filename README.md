@@ -38,6 +38,8 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 ## :scroll: Design Documentation
 
+![sequence diagram](https://imgur.com/DBD5VvG)
+
 In the development process the following principles were followed as closely as possible
 * SOLID
   * single responsibility 
