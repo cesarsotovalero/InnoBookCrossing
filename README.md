@@ -21,6 +21,12 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * Spring
 * React
 
+### Design Documentation
+
+In the development process the following principles were followed as closely as possible
+* SOLID
+* REST
+
 ### Authors
  
  * Dariya Vakhitova
