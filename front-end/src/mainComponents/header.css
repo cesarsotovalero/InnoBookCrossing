@@ -4,9 +4,10 @@
     display: flex;
     width:100vw;
     height: 75px;
-    background-color: #88cb01;
+    background-color: #348f41;
     justify-content: space-between;
     z-index: 10;
+    box-shadow: 0 0 10px 5px #0f571e;
 
 }
 
@@ -106,7 +107,7 @@
     width: 320px;
     justify-content: start;
     align-items:center;
-    background-color:#88cb01;
+    background-color:#348f41;
     color:white;
     height: 75px;
     text-align: center;
@@ -171,7 +172,7 @@ label{
     color: white;
     text-decoration: none;
     border-top: 1px solid rgba(255, 255, 255,0.3 ) ;
-    background-color:#88cb01;
+    background-color:#348f41;
 }
 
 #check_menu:checked ~ .main-menu{
