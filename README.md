@@ -1,4 +1,4 @@
-# InnoBookCrossing - Application for sharing books at Innopolis
+# :green_book: InnoBookCrossing - Application for sharing books at Innopolis
 
 ## :mag: General Information 
 
