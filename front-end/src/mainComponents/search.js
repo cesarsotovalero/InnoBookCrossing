@@ -17,7 +17,7 @@ const styles ={
     },
     found: {
         position:'absolute',
-        zIndex:'100',
+        zIndex:'90',
         width: '60%',
         marginLeft:'20%',
         marginRight:'20%',
