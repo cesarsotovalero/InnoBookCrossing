@@ -44,7 +44,6 @@ class Home extends Component {
                 <button onClick={() => this.setState({showAdd : !this.state.showAdd})}>
                     { this.state.showAdd ? 'Cancel' : 'Add book' }
                 </button>
-
                 { this.state.showAdd ? <AddBook/> : null }
 
                 {/*<Carousel bookSet={this.latestBooks} label={"Latest updates"}/>*/}

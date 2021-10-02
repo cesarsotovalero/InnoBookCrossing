@@ -14,7 +14,26 @@ code {
     monospace;
 }
 
-input {outline:none;}
+input {
+  outline:none;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1%;
+  border: 2px solid #348f41;
+  color: #348f41;
+}
+button {
+  background: linear-gradient(#348f41, #0f571e);
+  border-radius: 25px;
+  padding: 1%;
+  color: #fff;
+  font-weight: bold;
+}
+
+.inactive_button{
+  color: #7b868c;
+  background: #b0b3b2;
+}
 
 h1{
   color: #348f41;

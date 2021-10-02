@@ -9,11 +9,6 @@ const styles ={
         width: '60%',
         marginLeft:'20%',
         marginRight:'20%',
-        backgroundColor:'#fff',
-        border: '2px solid #348f41',
-        borderRadius: '15px',
-        padding: '1%',
-        color: '#348f41',
     },
     found: {
         position:'absolute',

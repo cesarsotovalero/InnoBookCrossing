@@ -18,18 +18,8 @@ const styles ={
     },
     input: {
         width: '60%',
-        backgroundColor:'#ddd',
-        border: '1px solid dimgray',
-        height: '20px',
-        borderRadius: '5px'
     },
     button: {
-        position: 'absolute',
-        backgroundColor:'#88cb01',
-        border: '1px solid dimgray',
-        borderRadius: '5px',
-        left: '10px',
-        bottom: '20px'
     },
 
 }
@@ -43,7 +33,7 @@ export default function AddBook(props){
             <p>Provide a link to book image</p><input style={styles.input}/>
             <p>Enter book description</p><input style={styles.input}/>
             <p>Who are you?Tg alias</p><input style={styles.input}/>
-            <button style={styles.button}><p>Submit book</p></button>
+            <button style={styles.button} className={'inactive_button'}>Submit book</button>
         </div>
     )
 }
