@@ -40,11 +40,11 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 ## :scroll: Design Documentation
 
-[Design Doc](Design%20Documentation.md)
+[Design Doc](Documentation/Design%20Documentation.md)
 
 ## :hammer: Architecture
 
-[Architecture](Architecture.md)
+[Architecture](Documentation/Architecture.md)
 
 ### Management Tools
 
