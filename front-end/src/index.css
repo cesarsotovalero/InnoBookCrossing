@@ -22,6 +22,36 @@ input {
   border: 2px solid #348f41;
   color: #348f41;
 }
+
+textarea {
+  outline:none;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1%;
+  border: 2px solid #348f41;
+  color: #348f41;
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+  background: #348f41;
+}
+
+/* Handle on hover */
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #0f571e;
+}
+
 button {
   background: linear-gradient(#348f41, #0f571e);
   border-radius: 25px;
