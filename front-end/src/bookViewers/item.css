@@ -35,6 +35,8 @@
     font-size: 14px;
     left: 50%;
     color: #000;
+    max-height: 60px;
+    overflow: hidden;
     transform: translate(-50%, 0)
 }
 .bookCell .bookInfo h3{
