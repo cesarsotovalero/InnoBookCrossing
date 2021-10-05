@@ -1,4 +1,4 @@
-package com.example.innobookcrossing.rest;
+package com.example.innobookcrossing.controller;
 
 import com.example.innobookcrossing.exceptions.NotFoundException;
 import com.example.innobookcrossing.jpa.BookRepository;
