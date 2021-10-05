@@ -31,10 +31,11 @@ public class AuthController {
     @PostMapping("/register")
     @CrossOrigin(origins = "http://localhost:3000")
     public User register(@RequestBody User user) {
-        if (!user.getAlias().equals(userRepository.findUserByAlias(user.getAlias()).getAlias()) &&
-                !user.getPassword().equals(userRepository.findUserByAlias(user.getAlias()).getPassword()))
-            return userRepository.save(user);
-        else throw new AlreadyExistException("Such user already exists");
+        return userRepository.save(user);
+//        if (!user.getAlias().equals(userRepository.findUserByAlias(user.getAlias()).getAlias()) &&
+//                !user.getPassword().equals(userRepository.findUserByAlias(user.getAlias()).getPassword()))
+//            return userRepository.save(user);
+//        else throw new AlreadyExistException("Such user already exists");
     }
 
 }
