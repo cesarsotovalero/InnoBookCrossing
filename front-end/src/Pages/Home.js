@@ -1,25 +1,32 @@
 import React, {Component} from 'react';
 import Carousel from "../bookViewers/carousel";
 import AddBook from "../mainComponents/addBook";
+import { restApiHost } from '../mainComponents/header';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
             latestBooks: [],
-            showAdd: false
+            showAdd: false,
+            active: true,
         }
     }
     componentDidMount() {
-        fetch('http://localhost:8080/book/get/all')
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                this.setState({
-                    latestBooks: data
+        console.log(restApiHost);
+        try{
+            fetch('http://localhost:8080/book/get/all')
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    this.setState({
+                        latestBooks: data
+                    });
                 });
-            });
+        } catch (error) {
+        console.error('Ошибка:', error);
+    }
     }
 
     render() {
@@ -40,8 +47,9 @@ class Home extends Component {
         //     {id:8, title:"", author:"Браун", img:"https://cdn1.ozone.ru/multimedia/wc1200/1011429201.jpg"}
         // ]
         return (
-            <div className="Home">
-                <button onClick={() => this.setState({showAdd : !this.state.showAdd})}>
+            <div className={ this.state.active ? null : 'frozen' }>
+                <button onClick={() => this.setState({showAdd : !this.state.showAdd,
+                    active : !this.state.active})}>
                     { this.state.showAdd ? 'Cancel' : 'Add book' }
                 </button>
                 { this.state.showAdd ? <AddBook/> : null }
