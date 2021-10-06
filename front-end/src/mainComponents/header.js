@@ -2,6 +2,10 @@ import React from 'react';
 import './header.css';
 
 
+const restApiHost = 1231313;
+export { restApiHost };
+
+
 export default function Header(){
     return(
 

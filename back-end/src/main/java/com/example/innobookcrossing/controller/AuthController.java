@@ -15,6 +15,7 @@ public class AuthController {
     @Autowired
     private UserRepository userRepository;
 
+
     @PostMapping("/signin")
     @CrossOrigin(origins = "http://localhost:3000")
     public String singIn(@RequestBody User user) throws NotFoundException {
@@ -28,6 +29,7 @@ public class AuthController {
             }
         }
     }
+
 
     @PostMapping("/register")
     @CrossOrigin(origins = "http://localhost:3000")

@@ -39,16 +39,19 @@ export default function Search(onChange){
             return
         }else{
             setFind(find_set={id:0});
-            fetch('http://localhost:8080/book/search?search='+ book_name)
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    setFind(find_set=data)
-                })
+            try{
+                fetch('http://localhost:8080/book/search?search='+ book_name)
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        setFind(find_set=data)
+                    })
 
+            } catch (error) {
+                console.error('Ошибка:', error);
+            }
         }
-
     }
     return(
         <div>

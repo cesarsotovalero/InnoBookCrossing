@@ -27,24 +27,19 @@ const styles ={
 
 }
 
-export default function AddBook(props){
-    let title = null;
-    let author = null;
-    let description = null;
-    let imgURL = null;
-    let genre = null
+export default function Registration(props){
+    let logRef = null;
+    let passRef = null;
+    let [find_set, setFind] = React.useState({})
 
-    function postBook(){
-        let data = { title: title.value,
-            author: author.value,
-            description: description.value,
-            image: imgURL.value,
-            genre: genre.value};
+    function onClick(){
+        let data = { alias: logRef.value,
+            password: passRef.value};
 
         console.log(data);
 
         try {
-            fetch('http://localhost:8080/book/2/add',{
+            fetch('http://localhost:8080/register',{
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
@@ -63,12 +58,12 @@ export default function AddBook(props){
     return(
         <div className="block" style={styles.block}>
             {props.style}
-            <p>Enter book title</p><input style={styles.input} ref={ref => title = ref}/>
-            <p>Enter book author</p><input style={styles.input} ref={ref => author = ref}/>
-            <p>Enter book genre</p><input style={styles.input} ref={ref => genre = ref}/>
-            <p>Provide a link to book image</p><input style={styles.input} ref={ref => imgURL = ref}/>
-            <p>Enter book description</p><textarea style={styles.input} rows={'4'} ref={ref => description = ref}/>
-            <button style={styles.button} onClick={() => postBook()}><p>Submit book</p></button>
+            <p>login</p><input style={styles.input}
+                               ref={ref => logRef = ref}/>
+            <p>password</p><input style={styles.input}
+                                  ref={ref => passRef = ref}/>
+            <button style={styles.button}
+                    onClick={() => onClick()}>Submit book</button>
         </div>
     )
 }
