@@ -4,7 +4,7 @@
 }
 
 .wrapper{
-    
+    position: relative;
     
     max-width: 400px;
     height: 400px;
@@ -67,10 +67,20 @@ font-weight: bold;
 
 input[type="submit"]{
     color:#fff;
-    
-    background: linear-gradient(#348f41, #0f571e);
+    transition: 0.2s;
+    background: #348f41;
     font-weight: bold;
 }
+
+input[type="submit"]:hover{
+ cursor: pointer;
+ 
+ background: #148f2f;
+ border: black 1px solid;
+
+ 
+}
+
 
 .trans{
     display: flex;
@@ -84,3 +94,24 @@ input[type="submit"]{
     text-decoration: none;
     font-size: 12px;
 }
+
+.close_btn{
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    width: 25px;
+    height: 25px;
+    background-color: #348f41;
+    color:white;
+    border-radius:30px;
+    border: 0px;
+    transition: 0.4s;
+
+}
+
+.close_btn:hover{
+    background-color: red;
+    cursor: pointer;
+    
+}
+
