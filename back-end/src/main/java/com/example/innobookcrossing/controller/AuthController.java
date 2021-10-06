@@ -3,7 +3,6 @@ package com.example.innobookcrossing.controller;
 import com.example.innobookcrossing.exceptions.AlreadyExistException;
 import com.example.innobookcrossing.jpa.UserRepository;
 import com.example.innobookcrossing.model.User;
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,14 +17,14 @@ public class AuthController {
 
     @PostMapping("/signin")
     @CrossOrigin(origins = "http://localhost:3000")
-    public User singIn(@RequestBody User user) throws NotFoundException {
+    public String singIn(@RequestBody User user) {
         if (userRepository.findUserByAlias(user.getAlias()) == null) {
-            throw new NotFoundException("User with such alias does not exist.");
+            return "User with such alias does not exist.";
         } else {
             if (userRepository.findUserByAlias(user.getAlias()).getPassword().equals(user.getPassword())) {
-                return userRepository.findUserByAlias(user.getAlias());
+                return userRepository.findUserByAlias(user.getAlias()).getId().toString();
             } else {
-                throw new NotFoundException("User with such password does not exist.");
+                return "User with such password does not exist.";
             }
         }
     }
