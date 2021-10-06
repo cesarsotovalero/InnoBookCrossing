@@ -18,12 +18,12 @@ public class AuthController {
 
     @PostMapping("/signin")
     @CrossOrigin(origins = "http://localhost:3000")
-    public String singIn(@RequestBody User user) throws NotFoundException {
+    public User singIn(@RequestBody User user) throws NotFoundException {
         if (userRepository.findUserByAlias(user.getAlias()) == null) {
             throw new NotFoundException("User with such alias does not exist.");
         } else {
             if (userRepository.findUserByAlias(user.getAlias()).getPassword().equals(user.getPassword())) {
-                return "User sing in successfully";
+                return userRepository.findUserByAlias(user.getAlias());
             } else {
                 throw new NotFoundException("User with such password does not exist.");
             }
