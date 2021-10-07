@@ -1,5 +1,8 @@
 # :green_book: InnoBookCrossing - Application for sharing books at Innopolis
 
+### Demo
+
+*will be soon*
 gh-md-toc
 
 ## :mag: General Information 
@@ -46,7 +49,7 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 [Architecture](Documentation/Architecture.md)
 
-### Management Tools
+## :date: Management Tools
 
  * [Trello](https://trello.com/b/S3ty1HNP/project-managment)
 
@@ -55,10 +58,6 @@ We all have books that we are not currently reading. Why should a book lay on a 
 *will be soon*
 
 ### Code example
-
-*will be soon*
-
-### Demo
 
 *will be soon*
 

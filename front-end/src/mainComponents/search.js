@@ -1,8 +1,5 @@
 import React from "react"
-import AddBook from "./addBook";
-import Carousel from "../bookViewers/carousel";
 import Item from "../bookViewers/item";
-// import "./addBook.css"
 
 const styles ={
     input: {
@@ -28,7 +25,7 @@ const styles ={
 }
 
 
-export default function Search(onChange){
+export default function Search(){
     let err = null;
     let searchRef = null;
     let [find_set, setFind] = React.useState({})

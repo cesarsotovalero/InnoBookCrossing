@@ -65,6 +65,13 @@ button {
   background: #b0b3b2;
 }
 
+button:hover{
+  box-shadow: 0 0 5px 1px #7b868c;
+}
+button:focus{
+  background: #0f571e;
+}
+
 h1{
   color: #348f41;
 }
