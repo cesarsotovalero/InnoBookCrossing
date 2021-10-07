@@ -18,14 +18,12 @@ public class Book {
     String author;
     @Column(name = "genre")
     String genre;
-    @Column(name = "owner")
-    String owner; // заменить на юзера
     @Column(name = "description")
     String description;
     @Column(name = "image")
     String image;
 
-    @ManyToOne//(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnore
     private User user;
@@ -52,14 +50,6 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
     }
 
     public String getGenre() {

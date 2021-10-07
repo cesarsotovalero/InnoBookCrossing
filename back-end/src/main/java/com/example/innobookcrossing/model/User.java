@@ -1,5 +1,7 @@
 package com.example.innobookcrossing.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -15,7 +17,8 @@ public class User {
     @Column(name = "password")
     String password;
 
-    @OneToMany//(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private Set<Book> books;
 
     public User() {

@@ -46,7 +46,6 @@ public class PersonalLibraryController {
                 .map(book -> {
                     book.setTitle(bookUpdated.getTitle());
                     book.setGenre(bookUpdated.getGenre());
-                    book.setOwner(bookUpdated.getOwner());
                     book.setDescription(bookUpdated.getDescription());
                     book.setAuthor(bookUpdated.getAuthor());
                     book.setImage(bookUpdated.getImage());
@@ -62,7 +61,6 @@ public class PersonalLibraryController {
         if (!userRepository.existsById(userId)) {
             throw new NotFoundException(USER_NOT_FOUND);
         }
-
         return bookRepository.findByUserId(userId);
     }
 }

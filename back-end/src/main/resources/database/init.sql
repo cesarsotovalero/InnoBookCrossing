@@ -4,7 +4,6 @@ CREATE TABLE users
     alias    VARCHAR(200),
     password VARCHAR(200)
 );
-
 CREATE SEQUENCE user_seq START WITH 4 INCREMENT BY 1;
 CREATE TABLE book
 (
@@ -12,7 +11,6 @@ CREATE TABLE book
     title       VARCHAR(200),
     author      VARCHAR(200),
     genre       VARCHAR(200),
-    owner       VARCHAR(200),
     description VARCHAR(500),
     image       VARCHAR(200),
     user_id     int,

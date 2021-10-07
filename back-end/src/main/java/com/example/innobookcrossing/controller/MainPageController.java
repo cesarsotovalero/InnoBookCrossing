@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -25,8 +26,16 @@ public class MainPageController {
     @ApiOperation("Get operation. Return book by specified ID. MAIN PAGE / LIBRARY")
     @GetMapping("book/get/{id}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Book getBook(@PathVariable Integer id) {
-        return bookRepository.findBookById(id);
+    public HashMap<String, String> getBook(@PathVariable Integer id) {
+        Book book = bookRepository.findBookById(id);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("title", book.getTitle());
+        map.put("author", book.getAuthor());
+        map.put("genre", book.getGenre());
+        map.put("description", book.getDescription());
+        map.put("image", book.getImage());
+        map.put("alias", book.getUser().getAlias());
+        return map;
     }
 
     @ApiOperation("Search for a book. MAIN PAGE / LIBRARY")
