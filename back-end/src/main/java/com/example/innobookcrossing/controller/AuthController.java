@@ -1,5 +1,6 @@
 package com.example.innobookcrossing.controller;
 
+import com.example.innobookcrossing.exceptions.AlreadyExistException;
 import com.example.innobookcrossing.jpa.UserRepository;
 import com.example.innobookcrossing.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,23 +16,23 @@ public class AuthController {
 
     @PostMapping("/signin")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Object singIn(@RequestBody User user) {
+    public User singIn(@RequestBody User user) {
         if (userRepository.findUserByAlias(user.getAlias()) == null) {
-            return "User with such alias does not exist.";
+            throw new AlreadyExistException("User with such alias does not exist.");
         } else {
             if (userRepository.findUserByAlias(user.getAlias()).getPassword().equals(user.getPassword())) {
                 return userRepository.findUserByAlias(user.getAlias());
             } else {
-                return "User with such password does not exist.";
+                throw new AlreadyExistException("User with such password does not exist.");
             }
         }
     }
 
     @PostMapping("/register")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Object register(@RequestBody User user) {
+    public User register(@RequestBody User user) {
         if (userRepository.findUserByAlias(user.getAlias()) == null) {
             return userRepository.save(user);
-        } else return "User already exists.";
+        } else throw new AlreadyExistException("User already exists.");
     }
 }
