@@ -12,7 +12,7 @@ export default function BookInfo({book}){
                 {book.image ? (
                     <img className="bookImg" src={book.image}/>
                 ) : (
-                    <img className="bookImg" src="no_image.png"/>
+                    <img className="bookImg" src="../no_image.png"/>
                 )}
             </div>
             <div className="bookInfo">
