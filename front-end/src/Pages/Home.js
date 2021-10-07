@@ -7,10 +7,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            latestBooks: [],
-            showAdd: false,
-            active: true,
-            modalActive: true,
+            bookList: [],
+            modalActive: false,
         }
     }
     componentDidMount() {
@@ -21,7 +19,7 @@ class Home extends Component {
                 })
                 .then((data) => {
                     this.setState({
-                        latestBooks: data
+                        bookList: data
                     });
                 });
         } catch (error) {
@@ -29,24 +27,25 @@ class Home extends Component {
         }
     }
 
-    handleClick = () => this.setState({showAdd : !this.state.showAdd})
+    handleClick = () => this.setState({modalActive : !this.state.modalActive})
     render() {
         let styles ={
-            hidden:{
-                visibility: 'hidden',
+            button:{
+                width: '30%',
+                height: '30px',
+                marginTop: '20px',
+                marginLeft: '35%'
             }
         }
-        const latestWishes = this.state.latestBooks
+        const bookList = this.state.bookList
 
         return (
             <div>
-                <button onClick={this.handleClick}>
-                    { this.state.showAdd ? 'Cancel' : 'Add book' }
+                <button onClick={this.handleClick} style={styles.button}>
+                    { this.state.modalActive ? 'Cancel' : 'Add book' }
                 </button>
-                <AddBook active={this.state.showAdd} setActive={this.handleClick}/>
-
-                {/*<Carousel bookSet={this.latestBooks} label={"Latest updates"}/>*/}
-                <Carousel bookSet={latestWishes} label={"Latest wishes"}/>
+                <AddBook active={this.state.modalActive} setActive={this.handleClick}/>
+                <Carousel bookSet={bookList} label={"My additions"}/>
             </div>
         );
     }
