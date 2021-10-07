@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reg.css">
     <title>Document</title>
+
+
 </head>
 <body>
+    <script src="validation.js" lang="en"></script>
+
     <form class="wrapper">
         <div class="reg_text">
             <span>
@@ -16,7 +20,7 @@
         </div>
 
         <div class="alias_box box">
-            <input type="text" id="alias" placeholder="Alias" required minlength="5" maxlength="32">
+            <input type="text" id="alias" placeholder="Alias" required minlength="5" maxlength="32" >
         </div>
 
         <div class="password_box box">
@@ -24,7 +28,7 @@
         </div>
 
         <div class="conf_password_box box">
-            <input id="password" type="password" id="conf_password" placeholder="Confirm the Password" required minlength="6" maxlength="32">
+            <input type="password" id="conf_password" placeholder="Confirm the Password" required minlength="6" maxlength="32" oninput="InvalidMsg(this);">
         </div>
 
         <div class="submit">
