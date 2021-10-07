@@ -32,9 +32,11 @@ class Home extends Component {
         let styles ={
             button:{
                 width: '30%',
-                height: '30px',
+                height: '40px',
                 marginTop: '20px',
-                marginLeft: '35%'
+                marginBottom: '20px',
+                marginLeft: '35%',
+                textAlign: 'center'
             }
         }
         const bookList = this.state.bookList

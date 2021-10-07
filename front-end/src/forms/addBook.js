@@ -9,7 +9,6 @@ const styles ={
     },
     block:{
         textAlign: 'left',
-        lineHeight: '0'
     },
     button:{
         width: '60%',

@@ -1,12 +1,14 @@
 import React from 'react';
 import './header.css';
-
-
-const restApiHost = 1231313;
-export { restApiHost };
+import Authorization from "../forms/authorization";
 
 
 export default function Header(){
+    const username = localStorage.getItem('user_id')
+    const [showAdd, setShowAdd] = React.useState(false)
+    function handleClick(){
+        setShowAdd(!showAdd);
+    }
     return(
 
     <header className="header">
@@ -34,7 +36,7 @@ export default function Header(){
             </div>
 
             <div className="username">
-                username
+                {username}
             </div>
 
             <input type="checkbox" id="check_menu"/>
@@ -46,9 +48,10 @@ export default function Header(){
 
                 <nav className="main-menu">
                     <a href="">Personal library</a>
-                    <a href="">Log out</a>
+                    <a onClick={handleClick}>Log out</a>
                 </nav>
         </nav>
+        <Authorization active={showAdd} setActive={handleClick}/>
 
     </header>
     )
