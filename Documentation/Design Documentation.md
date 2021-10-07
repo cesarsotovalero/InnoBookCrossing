@@ -95,6 +95,14 @@ export default function BookInfo({book}){
    )
 ```
 
-Frameworks:
+Patterns :
+The main pattern of the project is based on Model-View-Controller architecture. We separated the business logic of the application (Model) and the visual part of the application (View). We choose MVC pattern for several reasons:
 
-* Composite pattern 
+* Separation on View and Model will increase the reusability of the code.
+* This separation makes it easier to expand and maintain the system in the future.
+* MVC simplifies the program writing and improves code readability.
+
+Also the list of the pattern we used:
+The composite pattern was used in the front-end.
+Facade pattern - it is an inner pattern that subsists in MVC pattern, was used in the back-end. 
+
