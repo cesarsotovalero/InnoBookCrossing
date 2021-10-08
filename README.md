@@ -39,13 +39,32 @@ We all have books that we are not currently reading. Why should a book lay on a 
  * Roman Mukhtarov
  
 ## :round_pushpin: Requirement Engineering 
+
+Requirment Engineering Documentation containing:
+ * Roles and Responsibilities
+ * Functional Requirments
+ * User Stories
+ * Non-functional Requirments
+ * Buisness Goals
+ * Project Glossary
+ * Software Development Plan
+
 [Requirement Doc](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
 
 ## :scroll: Design Documentation
 
+Design Documentation containing:
+ * UML Diagrams
+ * SOLID Principles
+ * REST Principles
+ * Design Patterns
+
 [Design Doc](Documentation/Design%20Documentation.md)
 
 ## :hammer: Architecture
+
+Architecture documentation containing:
+ * Extencive description of the project's architecture
 
 [Architecture](Documentation/Architecture.md)
 
@@ -61,7 +80,10 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 *will be soon*
 
-### Installation
+### Installation Steps
 
-*will be soon*
-
+ 1) Download the contents of this Git repository
+ 2) Go to "front-end" directory
+ 3) Run "nmp install" command in this directory
+ 4) Run "nmp start" command
+ 5) Open http://localhost:3000 to view it in the browser
