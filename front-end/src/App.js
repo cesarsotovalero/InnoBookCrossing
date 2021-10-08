@@ -7,14 +7,14 @@ import Book from "./Pages/Book";
 import React from "react";
 
 function App() {
-
+    const user_id = localStorage.getItem('user_id')
     return (
         <div>
             <Header/>
             <Router>
                 <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/library" component={Lib} />
+                    {user_id ? <Route exact path="/home" component={Home} /> : null}
+                    <Route exact path="/" component={Lib} />
                     <Route path='/library/:book' component={Book}/>
                 </Switch>
             </Router>

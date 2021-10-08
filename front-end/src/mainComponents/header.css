@@ -70,7 +70,7 @@
 
 }
 .nav_menu a:hover{
-    background-color:gray;
+    background-color:#0f571e;
     transition: 0.5s all;
 }
 
@@ -94,10 +94,12 @@
 
 .username{
     margin-left: 60px;
-    color: black;
+    color: white;
     justify-content: center;
     align-items:center;
     display: flex;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .user_menu{
@@ -233,5 +235,8 @@ label{
 .title, .author,.genre,.owner{
     width: 300px;
     height: 80px;
+}
+.block{
+    display: flex;
 }
 

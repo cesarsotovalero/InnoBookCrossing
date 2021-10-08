@@ -1,16 +1,25 @@
 import React from 'react';
 import './header.css';
 import Authorization from "../forms/authorization";
+import Registration from "../forms/registration";
 
 
 export default function Header(){
-    const username = localStorage.getItem('user_id')
-    const [showAdd, setShowAdd] = React.useState(false)
-    function handleClick(){
-        setShowAdd(!showAdd);
+    const username = localStorage.getItem('username')
+    const [showAuth, setShowAuth] = React.useState(false)
+    const [showReg, setShowReg] = React.useState(false)
+    function handleLogIn(){
+        setShowAuth(!showAuth);
+    }
+    function openReg(){
+        setShowReg(!showReg);
+        setShowAuth(!showAuth);
+    }
+    function handleLogOut(){
+        localStorage.clear()
+        window.location.reload();
     }
     return(
-
     <header className="header">
         <nav className="nav_menu">
 
@@ -19,11 +28,14 @@ export default function Header(){
             </div>
 
             <ul>
+                {username ? (
+                    <li>
+                        <a href="/home">Home</a>
+                    </li>
+                ) : null}
+
                 <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/library">Library</a>
+                    <a href="/">Library</a>
                 </li>
             </ul>
 
@@ -31,13 +43,16 @@ export default function Header(){
 
         <nav className="user_menu">
 
-            <div className="user_image">
-                <img src="user_logo.jpg" alt=""/>
-            </div>
+            {username ? (
+                <div className={'block'}>
+                    <div className="user_image">
+                        <img src="user_logo.jpg" alt=""/>
+                    </div>
+                    <div className="username">
+                        {username}
+                    </div>
+                </div>): null}
 
-            <div className="username">
-                {username}
-            </div>
 
             <input type="checkbox" id="check_menu"/>
                 <label htmlFor="check_menu"></label>
@@ -47,11 +62,13 @@ export default function Header(){
                 <div className="burger-line fourth-line"></div>
 
                 <nav className="main-menu">
-                    <a href="">Personal library</a>
-                    <a onClick={handleClick}>Log out</a>
+                    <a href="/home">Personal library</a>
+                    {username ? <a onClick={handleLogOut}>Log out</a> : <a onClick={handleLogIn}>Log in</a>}
+
                 </nav>
         </nav>
-        <Authorization active={showAdd} setActive={handleClick}/>
+        <Authorization active={showAuth} setActive={handleLogIn} openReg={openReg}/>
+        <Registration active={showReg} setActive={openReg}/>
 
     </header>
     )

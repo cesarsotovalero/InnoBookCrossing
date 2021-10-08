@@ -1,58 +1,62 @@
 import React from "react"
 import Modal from "./modal";
-import './authorization.css';
+import "./reg.css"
 
 const styles ={
 }
 
-export default function Authorization({active, setActive, openReg}){
+export default function Registration({active, setActive}){
     const [error_message, setError_message] = React.useState("");
     let logRef = null;
     let passRef = null;
-    function onSubmit(event){
+    let cpassRef = null;
+
+    function onClick(event){
         event.preventDefault()
-        if (logRef.value.length < 2 ) {
+        if (logRef.value.length < 6 ) {
             setError_message('Alias is not valid!');
             return false;
         }
-        if (passRef.value.length < 2 ) {
-            setError_message('Password is not valid!');
+        if (logRef.value[0] !== "@" ) {
+            setError_message('Provide telegram alias with \'@\' symbol!');
+            return false;
+        }
+        if (passRef.value.length < 8 ) {
+            setError_message('Password should contain more than 8 symbols!');
+            return false;
+        }
+        if (passRef.value !== cpassRef.value){
+            setError_message('Passwords did not match!');
             return false;
         }
         let data = {alias: logRef.value,
             password: passRef.value};
+        console.log(data);
+
         try {
-            fetch('http://localhost:8080/signin',{
+            fetch('http://localhost:8080/register',{
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    'Content-Type': 'application/json'
                 }})
                 .then((response) => {
                     return response.json();
                 })
                 .then((data) => {
-                    if (data.message) {
-                        setError_message(data.message);
-                        return false;
-                    }
-                    localStorage.setItem('user_id', data['id']);
-                    localStorage.setItem('username', data['alias']);
-                    setActive();
+                    setActive()
                     return false;
                 })
         } catch (error) {
             alert('Ошибка:'+ error);
-            return false;
         }
     }
     return(
         <Modal active={active} setActive={setActive}>
-            <form className="wrapper" onClick={onSubmit}>
-                <div className="title">
+            <form className="wrapper">
+                <div className="reg_text">
             <span>
-                Welcome Back
+                Sign Up
             </span>
                 </div>
 
@@ -63,19 +67,20 @@ export default function Authorization({active, setActive, openReg}){
                 <div className="password_box box">
                     <input type="password" id="password" placeholder="Password" ref={ref => passRef = ref}/>
                 </div>
-                {error_message ?(
+
+                <div className="conf_password_box box">
+                    <input type="password" id="conf_password" placeholder="Confirm the Password" ref={ref => cpassRef = ref}/>
+                </div>
+                {error_message ? (
                     <div className={"error"}>
                         {error_message}
                     </div>
                 ):(<br/>)}
 
-                <div className="reg_button box" id="submit">
-                    <button type="submit" onClick={onSubmit}>Sign In</button>
+                <div className="submit">
+                    <button type="submit" onClick={onClick}>Create my account</button>
                 </div>
             </form>
-            <div className="trans">
-                <a onClick={openReg}>Don't have an account? </a>
-            </div>
 
             <button className="close_btn" onClick={setActive}>
                 <span>&times;</span>
