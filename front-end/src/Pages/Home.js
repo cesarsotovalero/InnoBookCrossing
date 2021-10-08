@@ -9,11 +9,13 @@ class Home extends Component {
         this.state = {
             bookList: [],
             modalActive: false,
+            user_id:"",
         }
     }
     componentDidMount() {
+        const user_id = localStorage.getItem('user_id')
         try{
-            fetch('http://localhost:8080/book/get/all')
+            fetch('http://localhost:8080//user/' + user_id + '/books')
                 .then((response) => {
                     return response.json();
                 })
@@ -23,11 +25,11 @@ class Home extends Component {
                     });
                 });
         } catch (error) {
-        console.error('Ошибка:', error);
+        alert('Ошибка:' + error);
         }
     }
 
-    handleClick = () => this.setState({modalActive : !this.state.modalActive})
+    openAddBook = () => this.setState({modalActive : !this.state.modalActive})
     render() {
         let styles ={
             button:{
@@ -43,10 +45,10 @@ class Home extends Component {
 
         return (
             <div>
-                <button onClick={this.handleClick} style={styles.button}>
+                <button onClick={this.openAddBook} style={styles.button}>
                     { this.state.modalActive ? 'Cancel' : 'Add book' }
                 </button>
-                <AddBook active={this.state.modalActive} setActive={this.handleClick}/>
+                <AddBook active={this.state.modalActive} setActive={this.openAddBook}/>
                 <Carousel bookSet={bookList} label={"My additions"}/>
             </div>
         );

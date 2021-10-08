@@ -7,7 +7,6 @@ const styles ={
 }
 
 export default function Modal({active, setActive, children}){
-    console.log("I am here")
 
     return(
         <div className={active ? "modal active" : "modal"} onClick={() => setActive()}>

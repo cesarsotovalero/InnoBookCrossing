@@ -19,6 +19,7 @@ const styles ={
 }
 
 export default function AddBook({active, setActive}){
+    const user_id = localStorage.getItem('user_id')
     let title = null;
     let author = null;
     let description = null;
@@ -34,7 +35,7 @@ export default function AddBook({active, setActive}){
             genre: genre.value};
 
         try {
-            fetch('http://localhost:8080/book/2/add',{
+            fetch('http://localhost:8080/book/' + user_id + '/add',{
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {

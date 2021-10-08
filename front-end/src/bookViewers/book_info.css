@@ -10,6 +10,7 @@
     padding: 1%;
     background-color: #348f41;
     border-radius: 15px;
+    position: relative;
 }
 .info .bookImg{
     height: 98%;
@@ -21,7 +22,7 @@
 
 .info .bookInfo{
     height: 100%;
-    line-height: 1em;
+    line-height: 2em;
     margin: 0;
     padding: 2%;
     inline-size: 0;
@@ -31,4 +32,13 @@
     border-radius: 20px;
     box-shadow: 0 0 20px 10px #b0b3b2;
     background: linear-gradient(#b0b3b2, #fff);
+}
+
+.btn_edit{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    min-width: 20%;
+    z-index: 50;
+    padding: 5px;
 }

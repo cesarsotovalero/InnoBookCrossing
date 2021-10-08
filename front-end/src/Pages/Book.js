@@ -26,7 +26,7 @@ class Book extends Component {
         const book = this.state.book
         return (
             <div>
-                <BookInfo book={book}/>
+                <BookInfo book={book} book_id={this.props.match.params.book}/>
             </div>
         );
     }
