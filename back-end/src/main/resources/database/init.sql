@@ -13,6 +13,7 @@ CREATE TABLE book
     genre       VARCHAR(200),
     description VARCHAR(500),
     image       VARCHAR(200),
+    available   Boolean,
     user_id     int,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (id)
 );

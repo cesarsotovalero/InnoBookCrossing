@@ -35,9 +35,9 @@ public class PersonalLibraryController {
     @ApiOperation("update a book. Returns Book entity. PERSONAL LIBRARY")
     @PutMapping("/user/{userId}/book/{bookId}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Book updateAssignment(@PathVariable Integer userId,
-                                 @PathVariable Integer bookId,
-                                 @RequestBody Book bookUpdated) {
+    public Book updateBook(@PathVariable Integer userId,
+                           @PathVariable Integer bookId,
+                           @RequestBody Book bookUpdated) {
 
         if (!userRepository.existsById(userId)) {
             throw new NotFoundException(USER_NOT_FOUND);
@@ -49,6 +49,7 @@ public class PersonalLibraryController {
                     book.setDescription(bookUpdated.getDescription());
                     book.setAuthor(bookUpdated.getAuthor());
                     book.setImage(bookUpdated.getImage());
+                    book.setAvailable(bookUpdated.getAvailable());
                     return bookRepository.save(book);
                 }).orElseThrow(() -> new NotFoundException("Book not found!"));
     }

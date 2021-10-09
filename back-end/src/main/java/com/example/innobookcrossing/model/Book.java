@@ -22,11 +22,20 @@ public class Book {
     String description;
     @Column(name = "image")
     String image;
-
+    @Column(name = "available")
+    Boolean available;
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnore
     private User user;
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
 
     public Integer getId() {
         return id;

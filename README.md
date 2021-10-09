@@ -20,8 +20,6 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * User can publish books which he\she has.
 * User can borrow the book, if it is available or wait in a queue otherwise.
 * User can search for an interesting book using filters.
-* User can publish the book which he\she wants to find in the printed version.
-* Book owner can leave feedback on a user, who took the book recently.
 
 ### Frameworks or technology
 
@@ -39,29 +37,50 @@ We all have books that we are not currently reading. Why should a book lay on a 
  * Roman Mukhtarov
  
 ## :round_pushpin: Requirement Engineering 
-[Requirement Doc](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
+
+[Requirment Engineering Documentation](https://github.com/yadariya/InnoBookCrossing/blob/master/Documentation/Requirement%20Engineering.pdf) containing:
+ * Roles and Responsibilities
+ * Functional Requirments
+ * User Stories
+ * Non-functional Requirments
+ * Buisness Goals
+ * Project Glossary
+ * Software Development Plan
+ * Prototype
 
 ## :scroll: Design Documentation
 
-[Design Doc](Documentation/Design%20Documentation.md)
+[Design Documentation](Documentation/Design%20Documentation.md) containing:
+ * UML Diagrams
+ * SOLID Principles
+ * REST Principles
+ * Design Patterns
 
 ## :hammer: Architecture
 
-[Architecture](Documentation/Architecture.md)
+[Architecture Documentation](Documentation/Architecture.md) containing:
+ * Extencive description of the project's architecture
+ * Static view Diagram
+ * Dynamic view  Diagram
 
 ## :date: Management Tools
 
- * [Trello](https://trello.com/b/S3ty1HNP/project-managment)
+ * Our project was managed with the tool [Trello](https://trello.com/b/S3ty1HNP/project-managment) In the link, you will be able to find task distribution, the responsibility of each member. 
+ 
+## :computer: Code 
 
-### Screenshots
-
-*will be soon*
-
-### Code example
+### Screenshots with Static analyzers
 
 *will be soon*
 
-### Installation
+### Test coverage
 
 *will be soon*
 
+## :footprints: Installation Steps
+
+ 1) Download the contents of this Git repository
+ 2) Go to "front-end" directory
+ 3) Run "nmp install" command in this directory
+ 4) Run "nmp start" command
+ 5) Open http://localhost:3000 to view it in the browser
