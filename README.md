@@ -46,6 +46,7 @@ Requirment Engineering Documentation containing:
  * Buisness Goals
  * Project Glossary
  * Software Development Plan
+ * Prototype
 
 [Requirement Doc](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
 
@@ -63,8 +64,8 @@ Design Documentation containing:
 
 Architecture documentation containing:
  * Extencive description of the project's architecture
- *  Static view Diagram
- *  Dynamic view  Diagram
+ * Static view Diagram
+ * Dynamic view  Diagram
 
 [Architecture](Documentation/Architecture.md)
 
