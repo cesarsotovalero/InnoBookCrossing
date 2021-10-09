@@ -38,7 +38,7 @@ We all have books that we are not currently reading. Why should a book lay on a 
  
 ## :round_pushpin: Requirement Engineering 
 
-Requirment Engineering Documentation containing:
+[Requirment Engineering Documentation](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf) containing:
  * Roles and Responsibilities
  * Functional Requirments
  * User Stories
@@ -48,26 +48,20 @@ Requirment Engineering Documentation containing:
  * Software Development Plan
  * Prototype
 
-[Requirement Doc](https://github.com/yadariya/InnoBookCrossing/blob/master/Requirement%20Engineering.pdf)
-
 ## :scroll: Design Documentation
 
-Design Documentation containing:
+[Design Documentation](Documentation/Design%20Documentation.md) containing:
  * UML Diagrams
  * SOLID Principles
  * REST Principles
  * Design Patterns
 
-[Design Doc](Documentation/Design%20Documentation.md)
-
 ## :hammer: Architecture
 
-Architecture documentation containing:
+[Architecture Documentation](Documentation/Architecture.md) containing:
  * Extencive description of the project's architecture
  * Static view Diagram
  * Dynamic view  Diagram
-
-[Architecture](Documentation/Architecture.md)
 
 ## :date: Management Tools
 
