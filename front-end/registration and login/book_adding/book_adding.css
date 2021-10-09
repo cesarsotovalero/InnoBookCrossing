@@ -7,7 +7,7 @@
     position: relative;
     
     max-width: 650px;
-    height: 600px;
+    height: 750px;
     border: 2px solid  #348f41;
     
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
@@ -22,9 +22,9 @@
     width: 80%;
     display: flex;
     justify-content: center;
-    height: 17%;
+    height: 15%;
     margin:0 auto;
-    border-bottom:1px solid  #348f41;
+    border-bottom:2px solid  #348f41;
     position: relative;
     margin-bottom: 15px;
 }
@@ -128,4 +128,102 @@ textarea {
     left: 13%;
   }
 
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
   
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(221, 10, 10);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #348f41;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #348f41;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .available_box{
+    width: 80%;
+    justify-content: left;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+.available_box span{
+  margin-right: 3px;
+  color:rgb(134, 131, 131);
+}
+
+.submit_btn{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.submit_btn input{
+  color:#fff;
+  transition: 0.2s;
+  background: #348f41;
+  font-weight: bold;
+  width: 250px;
+  border-radius:15px;
+}
+
+.submit_btn input:hover{
+cursor: pointer;
+
+background: #148f2f;
+border: black 1px solid;
+
+
+}
