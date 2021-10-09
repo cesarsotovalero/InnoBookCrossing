@@ -74,9 +74,11 @@ We all have books that we are not currently reading. Why should a book lay on a 
 We use SonarLint Plugin to check our code. 
 
 Back-end: we have 12 files, all of them are written according to Java-code conventions. 
+
 ![image](https://user-images.githubusercontent.com/66779337/136665624-6c5f2a55-ecfe-4f38-99df-036b3a705b36.png)
 
 Front-end: we have 30 files, all of them are written according to JavaScript-code conventions. 
+
 ![image](https://user-images.githubusercontent.com/66779337/136665644-c609502b-02ca-483b-ba94-66c20486ec03.png)
 
 
