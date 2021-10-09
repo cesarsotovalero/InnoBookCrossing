@@ -4,6 +4,7 @@ import com.example.innobookcrossing.exceptions.NotFoundException;
 import com.example.innobookcrossing.jpa.BookRepository;
 import com.example.innobookcrossing.jpa.UserRepository;
 import com.example.innobookcrossing.model.Book;
+import com.example.innobookcrossing.dto.BookDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,9 @@ public class PersonalLibraryController {
     @ApiOperation("Add a book. Returns Book entity. PERSONAL LIBRARY")
     @PostMapping("book/{userId}/add")
     @CrossOrigin(origins = "http://localhost:3000")
-    public Book createBook(@PathVariable Integer userId, @RequestBody Book book) {
+    public Book createBook(@PathVariable Integer userId, @RequestBody BookDTO bookDTO) {
+        Book book = new Book(bookDTO.getId(), bookDTO.getTitle(), bookDTO.getAuthor(), bookDTO.getGenre(),
+                bookDTO.getDescription(), bookDTO.getImage(), bookDTO.getAvailable());
         return userRepository.findById(userId)
                 .map(user -> {
                     book.setUser(user);
@@ -37,8 +40,9 @@ public class PersonalLibraryController {
     @CrossOrigin(origins = "http://localhost:3000")
     public Book updateBook(@PathVariable Integer userId,
                            @PathVariable Integer bookId,
-                           @RequestBody Book bookUpdated) {
-
+                           @RequestBody BookDTO bookDTO) {
+        Book bookUpdated = new Book(bookDTO.getId(), bookDTO.getTitle(), bookDTO.getAuthor(), bookDTO.getGenre(),
+                bookDTO.getDescription(), bookDTO.getImage(), bookDTO.getAvailable());
         if (!userRepository.existsById(userId)) {
             throw new NotFoundException(USER_NOT_FOUND);
         }

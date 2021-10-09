@@ -2,9 +2,11 @@ package com.example.innobookcrossing.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "book")
 public class Book {
@@ -29,67 +31,17 @@ public class Book {
     @JsonIgnore
     private User user;
 
-    public Boolean getAvailable() {
-        return available;
+    public Book() {
     }
 
-    public void setAvailable(Boolean available) {
-        this.available = available;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
+    public Book(Integer id, String title, String author, String genre, String description, String image,
+                Boolean available) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
         this.genre = genre;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
         this.image = image;
+        this.available = available;
     }
 }
