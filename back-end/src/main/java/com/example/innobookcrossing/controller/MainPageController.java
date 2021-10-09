@@ -34,6 +34,7 @@ public class MainPageController {
         map.put("genre", book.getGenre());
         map.put("description", book.getDescription());
         map.put("image", book.getImage());
+        map.put("available", book.getAvailable().toString());
         map.put("alias", book.getUser().getAlias());
         return map;
     }

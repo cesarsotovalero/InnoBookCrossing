@@ -49,6 +49,7 @@ public class PersonalLibraryController {
                     book.setDescription(bookUpdated.getDescription());
                     book.setAuthor(bookUpdated.getAuthor());
                     book.setImage(bookUpdated.getImage());
+                    book.setAvailable(bookUpdated.getAvailable());
                     return bookRepository.save(book);
                 }).orElseThrow(() -> new NotFoundException("Book not found!"));
     }
