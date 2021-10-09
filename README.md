@@ -20,8 +20,6 @@ We all have books that we are not currently reading. Why should a book lay on a 
 * User can publish books which he\she has.
 * User can borrow the book, if it is available or wait in a queue otherwise.
 * User can search for an interesting book using filters.
-* User can publish the book which he\she wants to find in the printed version.
-* Book owner can leave feedback on a user, who took the book recently.
 
 ### Frameworks or technology
 
@@ -65,22 +63,26 @@ Design Documentation containing:
 
 Architecture documentation containing:
  * Extencive description of the project's architecture
+ *  Static view Diagram
+ *  Dynamic view  Diagram
 
 [Architecture](Documentation/Architecture.md)
 
 ## :date: Management Tools
 
- * [Trello](https://trello.com/b/S3ty1HNP/project-managment)
+ * Our project was managed with the tool [Trello](https://trello.com/b/S3ty1HNP/project-managment) In the link, you will be able to find task distribution, the responsibility of each member. 
+ 
+## :computer: Code 
 
-### Screenshots
-
-*will be soon*
-
-### Code example
+### Screenshots with Static analyzers
 
 *will be soon*
 
-### Installation Steps
+### Test coverage
+
+*will be soon*
+
+## :footprints: Installation Steps
 
  1) Download the contents of this Git repository
  2) Go to "front-end" directory
