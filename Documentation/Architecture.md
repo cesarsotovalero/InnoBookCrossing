@@ -20,3 +20,7 @@ Our project applies Three-Tier Client Server architecture. It follows by divisio
 * The Database part
 
     As for database management system we selected PostgreSQL. It stores all data that associated with user’s and book’s information in multiple tables. For avoiding data anomalies, we normalized our DB to … form. The database receives responses on fetching and updating data from server, performs it and then send the result to server using ORM.
+
+
+### Static View
+![image](https://user-images.githubusercontent.com/66779337/136684856-7d0fa57b-a87f-4a4a-be1c-bca131b6665d.png)
