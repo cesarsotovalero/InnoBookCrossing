@@ -1,4 +1,4 @@
-## :hammer: Architecture
+# :hammer: Architecture
 
 ![image](https://user-images.githubusercontent.com/66779337/136684819-9c6b91c7-e298-44bb-b5e7-a0dc0233392f.png)
 
@@ -24,3 +24,7 @@ Our project applies Three-Tier Client Server architecture. It follows by divisio
 
 ### Static View
 ![image](https://user-images.githubusercontent.com/66779337/136684866-0e0d6e4e-f9a4-4f2c-b12c-e9ab894c73e9.png)
+
+### Dynamic View
+![image](https://user-images.githubusercontent.com/66779337/136685103-8dd3c618-5b37-459b-98bb-3c36b06607dc.png)
+
