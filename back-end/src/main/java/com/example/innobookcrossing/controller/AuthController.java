@@ -1,5 +1,6 @@
 package com.example.innobookcrossing.controller;
 
+import com.example.innobookcrossing.dto.UserDTO;
 import com.example.innobookcrossing.exceptions.AlreadyExistException;
 import com.example.innobookcrossing.jpa.UserRepository;
 import com.example.innobookcrossing.model.User;
@@ -16,7 +17,8 @@ public class AuthController {
 
     @PostMapping("/signin")
     @CrossOrigin(origins = "http://localhost:3000")
-    public User singIn(@RequestBody User user) {
+    public User singIn(@RequestBody UserDTO userDTO) {
+        User user = new User(userDTO.getId(), userDTO.getAlias(), userDTO.getPassword());
         if (userRepository.findUserByAlias(user.getAlias()) == null) {
             throw new AlreadyExistException("User with such alias does not exist.");
         } else {
@@ -30,7 +32,8 @@ public class AuthController {
 
     @PostMapping("/register")
     @CrossOrigin(origins = "http://localhost:3000")
-    public User register(@RequestBody User user) {
+    public User register(@RequestBody UserDTO userDTO) {
+        User user = new User(userDTO.getId(), userDTO.getAlias(), userDTO.getPassword());
         if (userRepository.findUserByAlias(user.getAlias()) == null) {
             return userRepository.save(user);
         } else throw new AlreadyExistException("User already exists.");

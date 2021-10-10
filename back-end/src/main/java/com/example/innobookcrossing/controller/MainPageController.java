@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class MainPageController {
@@ -26,7 +27,7 @@ public class MainPageController {
     @ApiOperation("Get operation. Return book by specified ID. MAIN PAGE / LIBRARY")
     @GetMapping("book/get/{id}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public HashMap<String, String> getBook(@PathVariable Integer id) {
+    public Map<String, String> getBook(@PathVariable Integer id) {
         Book book = bookRepository.findBookById(id);
         HashMap<String, String> map = new HashMap<>();
         map.put("title", book.getTitle());
