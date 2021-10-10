@@ -24,12 +24,13 @@ input {
 }
 
 textarea {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
   outline:none;
   background-color: #fff;
   border-radius: 15px;
   padding: 1%;
-  border: 2px solid #348f41;
-  color: #348f41;
+  border: 1px solid #348f41;
+  color: black;
   resize: none;
 }
 
@@ -45,6 +46,7 @@ textarea::-webkit-scrollbar-track {
 /* Handle */
 textarea::-webkit-scrollbar-thumb {
   background: #348f41;
+
 }
 
 /* Handle on hover */
@@ -52,37 +54,29 @@ textarea::-webkit-scrollbar-thumb:hover {
   background: #0f571e;
 }
 
-button {
-  background: linear-gradient(#348f41, #0f571e);
-  border-radius: 25px;
-  padding: 1%;
-  color: #fff;
-  font-weight: bold;
-}
 
 .inactive_button{
   color: #7b868c;
   background: #b0b3b2;
 }
 
-button:hover{
-  box-shadow: 0 0 5px 1px #7b868c;
-}
 button:focus{
   background: #0f571e;
 }
 
-h1{
+h1, h2, h3, h4, p{
   color: #348f41;
 }
-h2{
-  color: #348f41;
-}
-h3{
-  color: #348f41;
-}
-p{
-  color: #348f41
+
+.selector{
+  border: 0;
+  height: 1px;
+  background: #000;
+  background-image: -webkit-linear-gradient(left, #fff, #000, #fff);
+  background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+  background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+  background-image: -o-linear-gradient(left, #fff, #000, #fff);
+  background-image: linear-gradient(left, #fff, #000, #fff);
 }
 
 *{
@@ -93,4 +87,69 @@ p{
 }
 .visible{
   visibility: visible;
+}
+
+.error{
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: tomato;
+  display: flex;
+  position: relative;
+}
+
+.error_icon{
+  height: 100%;
+
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:20px ;
+}
+
+.error_icon img{
+  height: 80%;
+  width:  80%;
+}
+
+.error_msg{
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+.err_close_btn{
+  background-color: Transparent;
+  border:none;
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  width:20px ;
+  height: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.err_close_btn:focus{
+  background-color: Transparent;
+}
+
+button[type="submit"]{
+  border: 1px solid #348f41;
+  width: 80%;
+  height:40px;
+  border-radius: 15px;
+  display: block;
+  padding-left: 5px;
+  color:#fff;
+  transition: 0.2s;
+  background: #348f41;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover{
+  cursor: pointer;
+  background: #148f2f;
+  border: black 1px solid;
+
+
 }

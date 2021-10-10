@@ -4,7 +4,8 @@
 }
 
 .wrapper{
-    text-align: left;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+    font-family: sans-serif;
 }
 
 .wrapper .box{

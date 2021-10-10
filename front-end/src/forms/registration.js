@@ -71,9 +71,23 @@ export default function Registration({active, setActive}){
                 <div className="conf_password_box box">
                     <input type="password" id="conf_password" placeholder="Confirm the Password" ref={ref => cpassRef = ref}/>
                 </div>
-                {error_message ? (
-                    <div className={"error"}>
-                        {error_message}
+                {error_message ?(
+                    <div className="error">
+                        <div className="error_icon">
+                            <img src="../error_icon.png" alt=""/>
+                        </div>
+
+                        <div className="error_msg">
+
+                            <span>{error_message}</span>
+
+                        </div>
+
+                        <button className="err_close_btn" onClick={()=>{setError_message("")}}>
+                            <span>&times;</span>
+                        </button>
+
+
                     </div>
                 ):(<br/>)}
 

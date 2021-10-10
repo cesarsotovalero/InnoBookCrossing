@@ -1,20 +1,9 @@
 import React from "react"
 import Modal from "./modal";
+import "./book_adding.css"
 
 
 const styles ={
-    input: {
-        marginBottom:'5px',
-        width: '96%',
-    },
-    block:{
-        textAlign: 'left',
-    },
-    button:{
-        width: '60%',
-        height: '30px',
-        marginLeft: '18%',
-    }
 
 }
 
@@ -25,16 +14,30 @@ export default function AddBook({active, setActive}){
     let description = null;
     let imgURL = null;
     let genre = null;
-    const [message, setMessage] = React.useState('');
+    const [error_message, setError_message] = React.useState("");
 
     function postBook(){
+        if (title.value.length < 2 ) {
+            setError_message('Title field is not valid!');
+            return false;
+        }
+        if (author.value.length < 4 ) {
+            setError_message('Author field is not valid!');
+            return false;
+        }
+        if (genre.value.length < 2 ) {
+            setError_message('Genre field is not valid!');
+            return false;
+        }
         let data = { title: title.value,
             author: author.value,
             description: description.value,
             image: imgURL.value,
-            genre: genre.value};
+            genre: genre.value,
+            available: "true"};
 
         try {
+
             fetch('http://localhost:8080/book/' + user_id + '/add',{
                 method: 'POST',
                 body: JSON.stringify(data),
@@ -49,19 +52,84 @@ export default function AddBook({active, setActive}){
                     setActive()
                 })
         } catch (error) {
-            setMessage(error)
+            alert(error)
         }
     }
     return(
         <Modal active={active} setActive={setActive}>
-            <div style={styles.block}>
-                <p>Enter book title</p><input style={styles.input} ref={ref => title = ref}/>
-                <p>Enter book author</p><input style={styles.input} ref={ref => author = ref}/>
-                <p>Enter book genre</p><input style={styles.input} ref={ref => genre = ref}/>
-                <p>Provide a link to book image</p><input style={styles.input} ref={ref => imgURL = ref}/>
-                <p>Enter book description</p><textarea style={styles.input} rows={'4'} ref={ref => description = ref}/>
-                {message ? <p>{message}</p> : null}
-                <button style={styles.button} onClick={() => postBook()}>Submit book</button>
+            <div className="adding_window">
+
+                <div className="adding_title ">
+            <span>
+                Adding a book
+            </span>
+                </div>
+
+                <div className="book_title_box adding_box">
+                    <div className="floating_title">
+                        Book's Title
+                    </div>
+
+                    <input id="book_title" type="text" ref={ref => title = ref}/>
+                </div>
+
+                <div className="book_author_box adding_box">
+                    <div className="floating_title">
+                        Book's Author
+                    </div>
+
+                    <input id="book_author" type="text" ref={ref => author = ref}/>
+                </div>
+
+                <div className="book_genre_box adding_box">
+                    <div className="floating_title">
+                        Book's Genre
+                    </div>
+                    <input id="book_genre" type="text" ref={ref => genre = ref}/>
+                </div>
+
+                <div className="photo_link_box adding_box">
+                    <div className="floating_title">
+                        Link to the photo
+                    </div>
+                    <input id="photo_link" type="text" ref={ref => imgURL = ref}/>
+                </div>
+
+                <div className="book_descr_box adding_box">
+                    <div className="floating_title">
+                        Description
+                    </div>
+                    <textarea name="" id="" cols="68" rows="6" ref={ref => description = ref}/>
+                </div>
+
+                {error_message ?(
+                    <div className="error">
+                        <div className="error_icon">
+                            <img src="../error_icon.png" alt=""/>
+                        </div>
+
+                        <div className="error_msg">
+
+                            <span>{error_message}</span>
+
+                        </div>
+
+                        <button className="err_close_btn" onClick={()=>{setError_message("")}}>
+                            <span>&times;</span>
+                        </button>
+
+
+                    </div>
+                ):(<br/>)}
+
+                <button className="close_btn" onClick={setActive}>
+                    <span>&times;</span>
+                </button>
+
+                <div className="submit_btn">
+                    <button onClick={() => postBook()}>Save book</button>
+                </div>
+
             </div>
         </Modal>
     )
