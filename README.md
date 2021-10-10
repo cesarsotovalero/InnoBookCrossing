@@ -93,3 +93,6 @@ We use manual testing to test our website.
  3) Run "nmp install" command in this directory
  4) Run "nmp start" command
  5) Open http://localhost:3000 to view it in the browser
+
+ demo 
+ <img src=".\ProjectDemo\ProjectDemo.gif">
