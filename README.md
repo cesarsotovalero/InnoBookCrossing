@@ -71,7 +71,7 @@ We all have books that we are not currently reading. Why should a book lay on a 
 
 ### Screenshots with Static analyzers
 
-We use SonarLint Plugin to check our code. 
+We use **SonarLint Plugin** to check our code. 
 
 Back-end: we have 12 files, all of them are written according to Java-code conventions. 
 
@@ -84,7 +84,7 @@ Front-end: we have 30 files, all of them are written according to JavaScript-cod
 
 ### Test coverage
 
-*will be soon*
+We use manual testing to test our website. 
 
 ## :footprints: Installation Steps
 
