@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Panel from "../bookViewers/book_info";
 import BookInfo from "../bookViewers/book_info";
 
 class Book extends Component {
