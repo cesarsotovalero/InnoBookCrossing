@@ -44,12 +44,12 @@ export default function Authorization({active, setActive, openReg}){
                 })
         } catch (error) {
             alert('Ошибка:'+ error);
-            return false;
+            return true;
         }
     }
     return(
         <Modal active={active} setActive={setActive}>
-            <form className="wrapper" onClick={onSubmit}>
+            <form className="wrapper">
                 <div className="title">
             <span>
                 Welcome Back
@@ -64,8 +64,22 @@ export default function Authorization({active, setActive, openReg}){
                     <input type="password" id="password" placeholder="Password" ref={ref => passRef = ref}/>
                 </div>
                 {error_message ?(
-                    <div className={"error"}>
-                        {error_message}
+                    <div className="error">
+                    <div className="error_icon">
+                    <img src="../error_icon.png" alt=""/>
+                    </div>
+
+                    <div className="error_msg">
+
+                    <span>{error_message}</span>
+
+                    </div>
+
+                    <button className="err_close_btn" onClick={()=>{setError_message("")}}>
+                    <span>&times;</span>
+                    </button>
+
+
                     </div>
                 ):(<br/>)}
 
