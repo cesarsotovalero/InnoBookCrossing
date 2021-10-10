@@ -1,9 +1,7 @@
 # :green_book: InnoBookCrossing - Application for sharing books at Innopolis
 
 ### Demo
-
-*will be soon*
-gh-md-toc
+https://user-images.githubusercontent.com/66779337/136712999-60a9291d-4e1c-47fc-8d2d-2a27884624ff.mp4
 
 ## :mag: General Information 
 
