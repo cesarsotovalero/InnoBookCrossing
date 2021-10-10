@@ -25,6 +25,6 @@ Our project applies Three-Tier Client Server architecture. It follows by divisio
 ### Static View
 ![image](https://user-images.githubusercontent.com/66779337/136684866-0e0d6e4e-f9a4-4f2c-b12c-e9ab894c73e9.png)
 
-### Dynamic View
-![image](https://user-images.githubusercontent.com/66779337/136685103-8dd3c618-5b37-459b-98bb-3c36b06607dc.png)
+### Dynamic View represented by Process-Flow diagram
+![image](https://user-images.githubusercontent.com/66779337/136685251-c7d3948a-e801-49ed-ad41-9ab4a775ff2e.png)
 
