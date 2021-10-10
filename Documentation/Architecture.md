@@ -23,4 +23,4 @@ Our project applies Three-Tier Client Server architecture. It follows by divisio
 
 
 ### Static View
-![image](https://user-images.githubusercontent.com/66779337/136684856-7d0fa57b-a87f-4a4a-be1c-bca131b6665d.png)
+![image](https://user-images.githubusercontent.com/66779337/136684866-0e0d6e4e-f9a4-4f2c-b12c-e9ab894c73e9.png)
