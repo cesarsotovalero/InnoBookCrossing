@@ -94,5 +94,8 @@ We use manual testing to test our website.
  4) Run "nmp start" command
  5) Open http://localhost:3000 to view it in the browser
 
- demo 
- <img src=".\ProjectDemo\ProjectDemo.gif">
+ ### Demo 
+ <img src=".\ProjectDemo\ProjectDemo.gif"/>
+ <br/>
+ <img src=".\ProjectDemo\ProjectDemoMobile.gif"/>
+
