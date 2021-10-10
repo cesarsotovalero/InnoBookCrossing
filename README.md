@@ -1,6 +1,6 @@
 # :green_book: InnoBookCrossing - Application for sharing books at Innopolis
 
-### :movie_camera: Demo
+## :movie_camera: Demo
 https://user-images.githubusercontent.com/66779337/136712999-60a9291d-4e1c-47fc-8d2d-2a27884624ff.mp4
  
 A detailed description of the demo video is provided in section **Code** below. 
