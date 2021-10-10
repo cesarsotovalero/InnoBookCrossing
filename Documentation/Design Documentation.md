@@ -15,7 +15,7 @@ In the development process the following principles were followed as closely as 
   * Other principles where not implemented due to the small scale of the project that resulted in lack of opportunities for implementation
 
 
-* REST - covered by Swagger Framework
+* REST - covered by Spring Framework
   * Client–server architecture
   * Statelessness
   * Cacheability
