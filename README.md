@@ -1,7 +1,9 @@
 # :green_book: InnoBookCrossing - Application for sharing books at Innopolis
 
-### Demo
+### :movie_camera: Demo
 https://user-images.githubusercontent.com/66779337/136712999-60a9291d-4e1c-47fc-8d2d-2a27884624ff.mp4
+ 
+A detailed description of the demo video is provided in section **Code** below. 
 
 ## :mag: General Information 
 
@@ -84,6 +86,13 @@ Front-end: we have 30 files, all of them are written according to JavaScript-cod
 
 We use manual testing to test our website. 
 
+### Demo
+In the demo video, the following features are demonstrated:
+* Unregister user is able to see all the books on the main page and perform a search by book's title. Other functions of the website are unavailable for unregister user. 
+* Register user is able to do the same functions as unregister user. In addition, the registered user can upload the book, edit it.  
+
+Web verion is avai
+
 ## :footprints: Installation Steps
 
  1) Download the contents of this Git repository
@@ -91,9 +100,3 @@ We use manual testing to test our website.
  3) Run "nmp install" command in this directory
  4) Run "nmp start" command
  5) Open http://localhost:3000 to view it in the browser
-
- ### Demo 
- <img src=".\ProjectDemo\ProjectDemo.gif"/>
- <br/>
- <img src=".\ProjectDemo\ProjectDemoMobile.gif"/>
-
