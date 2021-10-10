@@ -91,7 +91,6 @@ In the demo video, the following features are demonstrated:
 * Unregister user is able to see all the books on the main page and perform a search by book's title. Other functions of the website are unavailable for unregister user. 
 * Register user is able to do the same functions as unregister user. In addition, the registered user can upload the book, edit it.  
 
-Web verion is avai
 
 ## :footprints: Installation Steps
 
