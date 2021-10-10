@@ -1,6 +1,6 @@
 ## :hammer: Architecture
 
-![image](https://user-images.githubusercontent.com/66779337/136684709-497110dc-3a78-490b-8a8a-cc1de25bbd92.png)
+![image](https://user-images.githubusercontent.com/66779337/136684806-1b8efa17-fc15-43d1-866e-89a04634238d.png)
 
 Our project applies Three-Tier Client Server architecture. It follows by division of project operational logic on 3 different parts: 
 * The Browser, which clients use for interacting with the website.
