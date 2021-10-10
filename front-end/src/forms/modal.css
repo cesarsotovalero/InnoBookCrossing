@@ -20,6 +20,7 @@
 
 .modal .content{
     padding: 2%;
+    min-width: 600px;
     width: 40vw;
     border: 2px solid  #348f41;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;

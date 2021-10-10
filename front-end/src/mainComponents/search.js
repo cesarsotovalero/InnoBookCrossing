@@ -26,27 +26,27 @@ const styles ={
 
 
 export default function Search(){
-    let err = null;
     let searchRef = null;
     let [find_set, setFind] = React.useState({})
     function onChange(book_name){
         if (book_name===""){
-            err = null
-            setFind(find_set={id:-1});
-            return
+            setFind({id:-1});
+            return true
         }else{
-            setFind(find_set={id:0});
+            setFind({id:0});
             try{
                 fetch('http://localhost:8080/book/search?search='+ book_name)
                     .then((response) => {
                         return response.json();
                     })
                     .then((data) => {
-                        setFind(find_set=data)
+                        setFind(data)
+                        return true
                     })
 
             } catch (error) {
                 console.error('Ошибка:', error);
+                return false
             }
         }
     }
@@ -57,12 +57,12 @@ export default function Search(){
                    onChange={() => onChange(searchRef.value)}/>
             { find_set.id > 0? (
                 <div style={styles.found}>
-                    <p>По вашему запросу найдена одна книга:</p>
+                    <p>One book was found for your request:</p>
                     <Item book={find_set}/></div>
             ):null}
             { find_set.id === 0 ?(
-                <div style={styles.found}><p>По вашему запросу не найдено ни одной книги.
-                    Пожалуйста вводите полное название книги.</p></div>
+                <div style={styles.found}><p>No books were found for your search.
+                    Please enter the full title of the book.</p></div>
             ):null}
 
         </div>

@@ -45,7 +45,7 @@ class Home extends Component {
 
         return (
             <div>
-                <button onClick={this.openAddBook} style={styles.button}>
+                <button type="submit" onClick={this.openAddBook} style={styles.button}>
                     { this.state.modalActive ? 'Cancel' : 'Add book' }
                 </button>
                 <AddBook active={this.state.modalActive} setActive={this.openAddBook}/>

@@ -25,9 +25,6 @@ class Lib extends Component {
 
 
     render() {
-        const styles ={
-
-        }
         const library = this.state.library
         return (
             <div>

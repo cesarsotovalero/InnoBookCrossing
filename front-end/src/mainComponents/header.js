@@ -24,7 +24,7 @@ export default function Header(){
         <nav className="nav_menu">
 
             <div className="logo">
-                <img src="innopolis_logo.png" alt=""/>
+                <img src={"../innopolis_logo.png"} alt=""/>
             </div>
 
             <ul>
@@ -46,7 +46,7 @@ export default function Header(){
             {username ? (
                 <div className={'block'}>
                     <div className="user_image">
-                        <img src="user_logo.jpg" alt=""/>
+                        <img src="../user_logo.jpg" alt=""/>
                     </div>
                     <div className="username">
                         {username}
@@ -62,7 +62,7 @@ export default function Header(){
                 <div className="burger-line fourth-line"></div>
 
                 <nav className="main-menu">
-                    <a href="/home">Personal library</a>
+                    {username ? <a href="/home">Personal library</a> : null}
                     {username ? <a onClick={handleLogOut}>Log out</a> : <a onClick={handleLogIn}>Log in</a>}
 
                 </nav>
