@@ -4,7 +4,8 @@
 https://user-images.githubusercontent.com/66779337/136712999-60a9291d-4e1c-47fc-8d2d-2a27884624ff.mp4
  
 A detailed description of the demo video is provided in section **Code** below. 
-If the wideo is canseled after book edition, please go to the ProjectDemo folder in the root of repositiry and download a full version.
+
+If the video is canseled after book edition, please go to the ProjectDemo folder in the root of repositiry and download a full version.
 
 ## :mag: General Information 
 
